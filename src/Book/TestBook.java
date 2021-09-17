@@ -36,9 +36,14 @@ public class TestBook {
         book.printDatails();
     }
 
+    @Test
+    public void mustShowIfNumReferenceSetting(){
+        book.setNumReference("pOP");
+        book.printDatails();
 
-
-
+        book.setNumReference("");
+        book.printDatails();
+    }
 
 
 }
