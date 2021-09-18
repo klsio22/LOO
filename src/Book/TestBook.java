@@ -41,10 +41,13 @@ public class TestBook {
         book.setNumReference("pOP");
         book.printDatails();
 
+    }
+
+    @Test
+    public void mustShowErroCaseReferenceNotExist(){
         book.setNumReference("");
         book.printDatails();
     }
-
 
     @Test
     public void mustShowLoanNumber(){

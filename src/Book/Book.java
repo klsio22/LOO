@@ -1,11 +1,8 @@
 package Book;
 
 public class Book {
-    private String author;
-    private String title;
-    private int pages;
-    private String numReference;
-    private int borrowed;
+    private String author,title,numReference;
+    private int pages, borrowed;
 
     public Book(String bookAuthor, String bookTitle, int bookPages) {
         this.author = bookAuthor;
@@ -44,9 +41,9 @@ public class Book {
 
     public void setNumReference(String ref) {
         if (ref.length() >= 3)
-            this.numReference = ref;
+            numReference = ref;
         else
-            this.numReference = "";
+            numReference = "";
     }
 
     public void printDatails() {
