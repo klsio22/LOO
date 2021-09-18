@@ -1,20 +1,25 @@
 package Book;
 
-import java.util.Objects;
-import java.util.logging.ErrorManager;
-
 public class Book {
     private String author;
     private String title;
     private int pages;
     private String numReference;
-    private String erro = "";
+    private int borrowed;
 
     public Book(String bookAuthor, String bookTitle, int bookPages) {
         this.author = bookAuthor;
         this.title = bookTitle;
         this.pages = bookPages;
         this.numReference = "";
+    }
+
+    public void loan() {
+        this.borrowed++;
+    }
+
+    public int getBorrowed() {
+        return borrowed;
     }
 
     public String getAuthor() {
@@ -40,16 +45,21 @@ public class Book {
     public void setNumReference(String ref) {
         if (ref.length() >= 3)
             this.numReference = ref;
+        else
+            this.numReference = "";
     }
 
     public void printDatails() {
         if (numReference.length() != 0)
-            System.out.printf("\nAuthor: %s. Title: %s. Pages: %d\n",
-                    author, title, pages);
-        else
+            System.out.printf("\nAuthor: %s.\n" +
+                            "Title: %s.\n" +
+                            "Pages: %d\n" +
+                            "Emprestimo(s): %d.\n",
+                    author, title, pages, borrowed);
+        else {
+            System.out.print("Erro de referência");
             System.out.println("\nZZZ\n");
-
-
+        }
     }
 
 }

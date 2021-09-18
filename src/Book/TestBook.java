@@ -46,4 +46,17 @@ public class TestBook {
     }
 
 
+    @Test
+    public void mustShowLoanNumber(){
+        book.setNumReference("PPP");
+
+        book.loan();
+        book.loan();
+        book.loan();
+        book.printDatails();
+        assertEquals(3,book.getBorrowed());
+
+    }
+
+
 }
