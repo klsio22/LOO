@@ -31,7 +31,7 @@ class TesteTime {
 	}
 	
 	@Test
-	public void deveRemoverContatoRegistradoPeloIndice() {
+	public void mustRemoveContactRegisteredByIndex() {
 		time.adicionaJogador(jogador);
 		
 		assertEquals(jogador, time.remover(0));

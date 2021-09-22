@@ -11,20 +11,24 @@ public class Heater {
         this.min = min;
     }
 
+    public void setIncrement(int increment) {
+        if(increment >= 0)
+            this.increment = increment;
+    }
+
     public void wermUP() {
-        if (max <= 90)
+        if(temperatura < max)
             temperatura += increment;
     }
 
     public void coll() {
-        if (min >= 15)
+        if(temperatura > min)
             temperatura -= increment;
     }
 
     public double getTemperatura() {
         return temperatura;
     }
-
 
 }
 
