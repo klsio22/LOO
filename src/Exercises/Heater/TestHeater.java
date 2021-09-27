@@ -1,4 +1,4 @@
-package Heater;
+package Exercises.Heater;
 
 import static org.junit.jupiter.api.Assertions.*;
 

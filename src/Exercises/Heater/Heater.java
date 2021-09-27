@@ -1,4 +1,4 @@
-package Heater;
+package Exercises.Heater;
 
 public class Heater {
     private double temperatura;

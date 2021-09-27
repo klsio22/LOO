@@ -1,4 +1,4 @@
-package Book;
+package Exercises.Book;
 
 import static org.junit.jupiter.api.Assertions.*;
 

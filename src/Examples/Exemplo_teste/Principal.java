@@ -1,4 +1,4 @@
-package Exemplo_teste;
+package Examples.Exemplo_teste;
 
 public class Principal {
 

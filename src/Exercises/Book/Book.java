@@ -1,4 +1,4 @@
-package Book;
+package Exercises.Book;
 
 public class Book {
     private String author,title,numReference;
