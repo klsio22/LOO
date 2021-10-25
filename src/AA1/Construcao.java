@@ -1,6 +1,6 @@
 package AA1;
 
-public abstract class Construcao {
+public abstract class Construcao implements ImpostoMunicipal {
 
     protected int numeroAlvara;
     protected  int numeroAndares;

@@ -1,6 +1,6 @@
 package AA1;
 
-public class SobradoDoisPavimentos extends Construcao {
+public class SobradoDoisPavimentos extends Construcao implements ImpostoMunicipal {
 
     private double alturaPeDireito;
 
@@ -12,4 +12,10 @@ public class SobradoDoisPavimentos extends Construcao {
     public double calculaAltura() {
         return alturaPeDireito*2+5;
     }
+
+    @Override
+    public double calculaIPTU() {
+        return 150;
+    }
+
 }
