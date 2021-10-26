@@ -10,7 +10,7 @@ public class PredioLitoraneo extends Predio implements ImpostoMunicipal {
     }
 
     public double calculaAltura() {
-        return (numeroAndares * 2.9)+distanciaDoMar;
+        return (numeroAndares * 2.9);
     }
 
     @Override
