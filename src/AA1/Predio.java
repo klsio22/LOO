@@ -2,11 +2,11 @@ package AA1;
 
 public class Predio extends Construcao implements ImpostoMunicipal {
 
-    public Predio(int numeroAlvara, int numeroAndares) {
+    protected Predio(int numeroAlvara, int numeroAndares) {
         super(numeroAlvara, numeroAndares);
     }
 
-    public double calculaAltura() {
+    protected double calculaAltura() {
         return numeroAndares >= 1 && numeroAndares <= 10 ? numeroAndares * 3 :
                 (numeroAndares * 3) + 7;
     }

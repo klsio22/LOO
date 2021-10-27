@@ -1,16 +1,14 @@
 package AA1;
 
 public abstract class Construcao implements ImpostoMunicipal {
+    protected int numeroAlvara, numeroAndares;
 
-    protected int numeroAlvara;
-    protected  int numeroAndares;
-
-    public Construcao(int numeroAlvara, int numeroAndares) {
+    protected Construcao(int numeroAlvara, int numeroAndares) {
         this.numeroAlvara = numeroAlvara;
         this.numeroAndares = numeroAndares;
     }
 
-    public  abstract double calculaAltura();
+    protected  abstract double calculaAltura();
 
     /**
      * Nao altere o metodo toString.

@@ -4,12 +4,12 @@ public class SobradoDoisPavimentos extends Construcao implements ImpostoMunicipa
 
     private double alturaPeDireito;
 
-    public SobradoDoisPavimentos(int numeroAlvara, double alturaPeDireito) {
+    protected SobradoDoisPavimentos(int numeroAlvara, double alturaPeDireito) {
         super(numeroAlvara ,0);
         this.alturaPeDireito = alturaPeDireito;
     }
 
-    public double calculaAltura() {
+    protected double calculaAltura() {
         return alturaPeDireito*2+5;
     }
 

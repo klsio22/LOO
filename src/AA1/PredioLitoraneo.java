@@ -2,14 +2,14 @@ package AA1;
 
 public class PredioLitoraneo extends Predio implements ImpostoMunicipal {
 
-    protected double distanciaDoMar;
+    private double distanciaDoMar;
     private double valor;
 
-    public PredioLitoraneo(int numeroAlvara, int numeroAndares, double distanciaDoMar) {
+    protected PredioLitoraneo(int numeroAlvara, int numeroAndares, double distanciaDoMar) {
         super(numeroAlvara, numeroAndares);
     }
 
-    public double calculaAltura() {
+    protected double calculaAltura() {
         return (numeroAndares * 2.9);
     }
 
