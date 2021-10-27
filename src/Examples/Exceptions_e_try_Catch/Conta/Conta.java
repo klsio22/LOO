@@ -3,20 +3,25 @@ package Examples.Exceptions_e_try_Catch.Conta;
 public class Conta {
     private double limite, saldo;
 
-    protected void depositar(double deposito) {
-        saldo += deposito;
+    protected void depositar(double quantidade) {
+        this.saldo += quantidade;
     }
 
-    protected void setLimite(double limite) {
-        this.limite = limite;
+    protected void setLimite(double quantidade) {
+        this.limite = quantidade;
     }
 
-    protected void sacar(double saque) {
-        if (saldo > 0)
-            saldo -= saque;
+    //Obriga o devenvolverdor
+    protected void sacar(double quantidade) throws Exception {
+        if (quantidade > this.saldo + this.limite) {
+            throw new Exception("Erro: quantindade fora do limite");
+        } else {
+            saldo -= quantidade;
+        }
+
     }
 
-    protected double getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
 
