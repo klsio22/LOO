@@ -11,10 +11,18 @@ public class Conta {
         this.limite = quantidade;
     }
 
-    //Obriga o devenvolverdor
-    protected void sacar(double quantidade) throws Exception {
-        if (quantidade > this.saldo + this.limite) {
-            throw new Exception("Erro: quantindade fora do limite");
+    //Obriga o devenvolverdor a escrever o try/catch
+    // protected void sacar(double quantidade) throws Exception {
+    protected void sacar(double quantidade) {
+        if (quantidade > saldo + limite) {
+            //          throw new Exception("Erro: quantindade fora do limite");
+            //   Double d = null;
+            //   d.toString();
+
+            String srt = "Impossivel realizar o saque, " +
+                    " seu saldo é de R$: "+ saldo+ ", " +
+                    "o valor desejado é R$"+quantidade;
+            throw new SaldoInsuficienteExeception(srt,saldo,quantidade);
         } else {
             saldo -= quantidade;
         }

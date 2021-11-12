@@ -11,15 +11,52 @@ public class Main {
         System.out.printf("Saldo atual:", c.getSaldo());
         System.out.println(c);
 
+        //c.sacar(1000);
+
+        /*
+         Sempre que for tratar uma e Exception busque
+         tratar pela classe mais genérica possível. Porém quando for em casos
+         específicos, trata o específico depois usa Exception genéricas
+          */
+
+
+        //Nesse caso especificamos nosso erro baseado no problema com o saldo
         try {
-            c.sacar(1000);
-        }catch (Exception err){
-            System.out.println(err);
+            c.sacar(300);
+        } catch (SaldoInsuficienteExeception err) {
+            System.out.println(err.getMessage());
+
+            double valorEmprestimo = err.getQuantidade() - err.getSaldo();
+            System.out.println("O banco te oferece um emprestimo de R$:" +
+                    valorEmprestimo);
+
         }
+
+        /*try {
+            c.sacar(1000);
+        } catch (NullPointerException err) {
+            System.out.println("Erro específico");
+        } catch (RuntimeException e) {
+            System.out.println("Erro genérico");
+        }
+*/
+       /* try {
+            c.sacar(1000);
+        } catch (RuntimeException err) {
+            System.out.println("Erro genérico");
+        }*/
+
+
+        /*try {
+            c.sacar(1000);
+        }catch (IllegalArgumentException err){
+            System.out.println("Erro do IllegalArgumentException" +err);
+        }catch (NullPointerException e){
+            System.out.println("Erro do NullPointerException ");
+        }*/
 
         System.out.println(c);
 
-        System.out.printf("Saldo atual:", c.getSaldo());
 
 //        Main t = new Main();
 //        System.out.println("Incio do Main");
