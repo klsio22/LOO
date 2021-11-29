@@ -11,9 +11,9 @@ public class Main {
         Pessoa p1 = new Pessoa("Lima");
         p1.imprimir();
 
-        //Pessoa p2 = new Pessoa("P2")
-       // Pessoa p2 = new Student("Martins","1111");
-        //Pessoa p3 = new Worker("João","568444");
+        //Person p2 = new Person("P2")
+       // Person p2 = new Student("Martins","1111");
+        //Person p3 = new Worker("João","568444");
 
         imprimirNomePessas(student);
 
