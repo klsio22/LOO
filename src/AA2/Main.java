@@ -1,7 +1,7 @@
 package AA2;
 
+import java.text.Collator;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
 
@@ -13,16 +13,28 @@ public class Main {
      */
     public static List<String> geraVocabulario(List<String> listaEnigma) {
         // SEU CÓDIGO AQUI!
-        List<String> lista = listaEnigma.stream().distinct().collect(Collectors.toList());
-/*
-        Set<String> novalista = new HashSet<>(lista);
-*/
+        List<String> novalista = new ArrayList<>(listaEnigma);
 
+        removerDuplicados(novalista);
+        Collections.sort(novalista, Collator.getInstance());
 
+        return novalista;
+    }
 
+    public static void removerDuplicados(List<String> array) {
+        Set<String> elemento = new HashSet<String>();
 
+       for (int i = 0; i < array.size(); i++) {
+            String interador = array.get(i).toLowerCase();
 
-        return lista;
+            // verifique se isto já apareceu antes
+            if (!elemento.add(interador)) {
+                // se tiver, remova-o
+                array.remove(i);
+                // diminuir i, pois acabamos de remover o i'ésimo elemento
+                i--;
+            }
+        }
     }
 
     /**
@@ -32,11 +44,11 @@ public class Main {
     public static void main(String[] args) {
         // LISTA SIMPLES
         // Use esta lista no início dos seus testes.
-        List<String> listaEnigma = Arrays.asList(new String[]{"carro", "Carro", "violão", "abóbora", "violão"});
+        //List<String> listaEnigma = Arrays.asList(new String[]{"carro", "Carro", "violão", "abóbora", "violão"});
 
         // LISTA COMPLETA, USE ESSA LINHA PARA TESTES AVANÇADOS
         // Esta lista é aleatória, muda a cada execução, teste ela depois que finalizar seu código.
-        //List<String> listaEnigma = GeradorDeEnigma.gerar();
+        List<String> listaEnigma = GeradorDeEnigma.gerar();
 
         System.out.println(listaEnigma);
         System.out.println(listaEnigma.size());
