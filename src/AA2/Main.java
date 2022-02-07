@@ -8,7 +8,7 @@ public class Main {
     /**
      * Desenvolva aqui a sua atividade.
      *
-     * @param listaEnigma lista enviada pelo método main.
+     * @param listaEnigma lista enviada pelo método Main.
      * @return retornar uma listaVocabulario conforme a especificação da atividade.
      */
     public static List<String> geraVocabulario(List<String> listaEnigma) {
@@ -38,7 +38,7 @@ public class Main {
     }
 
     /**
-     * Não crie nenhum comportamento no método main.
+     * Não crie nenhum comportamento no método Main.
      * É permitido apenas manipular as LISTAS para mudar os parâmetros dos seus testes.
      */
     public static void main(String[] args) {
